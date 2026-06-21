@@ -18,9 +18,6 @@ spec:
         {{- end }}
     spec:
       serviceAccountName: fitbuddy-sa-workout-service
-      securityContext:
-        runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
-        runAsUser: {{ .Values.securityContext.runAsUser }}
       containers:
         - name: workout-service
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -44,3 +41,4 @@ spec:
               port: {{ .Values.service.port }}
             initialDelaySeconds: 10
             periodSeconds: 5
+
