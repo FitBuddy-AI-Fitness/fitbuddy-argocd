@@ -1,0 +1,16 @@
+{{- range $name, $config := .Values.microservices }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-{{ $name }}
+  labels:
+    app: fitbuddy-{{ $name }}
+spec:
+  selector:
+    app: fitbuddy-{{ $name }}
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ $config.port }}
+{{- end }}

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fitbuddy-config
+data:
+  ENVIRONMENT: {{ .Values.environment | quote }}
+  NODE_ENV: {{ .Values.environment | quote }}

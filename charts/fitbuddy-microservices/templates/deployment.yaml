@@ -1,0 +1,54 @@
+{{- range $name, $config := .Values.microservices }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fitbuddy-{{ $name }}
+  labels:
+    app: fitbuddy-{{ $name }}
+spec:
+  replicas: {{ $.Values.global.replicaCount }}
+  selector:
+    matchLabels:
+      app: fitbuddy-{{ $name }}
+  template:
+    metadata:
+      labels:
+        app: fitbuddy-{{ $name }}
+        {{- if $.Values.workloadIdentity.enabled }}
+        azure.workload.identity/use: "true"
+        {{- end }}
+    spec:
+      serviceAccountName: fitbuddy-sa
+      securityContext:
+        runAsNonRoot: {{ $.Values.global.securityContext.runAsNonRoot }}
+        runAsUser: {{ $.Values.global.securityContext.runAsUser }}
+      containers:
+        - name: {{ $name }}
+          image: "{{ $config.image }}:{{ $config.tag }}"
+          imagePullPolicy: Always
+          ports:
+            - containerPort: {{ $config.port }}
+          resources:
+            requests:
+              memory: {{ $.Values.global.resources.requests.memory }}
+              cpu: {{ $.Values.global.resources.requests.cpu }}
+            limits:
+              memory: {{ $.Values.global.resources.limits.memory }}
+              cpu: {{ $.Values.global.resources.limits.cpu }}
+          envFrom:
+            - configMapRef:
+                name: fitbuddy-config
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: {{ $config.port }}
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: {{ $config.port }}
+            initialDelaySeconds: 10
+            periodSeconds: 5
+{{- end }}

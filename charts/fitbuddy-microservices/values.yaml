@@ -1,0 +1,70 @@
+# Default values for fitbuddy-microservices
+
+environment: dev
+
+# Workload Identity configuration
+workloadIdentity:
+  enabled: true
+  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID" # Will be overridden by environment values
+
+# Global configuration applied to all microservices
+global:
+  replicaCount: 2
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "128Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+
+ingress:
+  enabled: true
+  className: azure-application-gateway
+  host: dev.fitbuddy.local
+
+# Define all microservices
+microservices:
+  auth-service:
+    image: aravindacr.azurecr.io/fitbuddy-auth-service
+    tag: latest
+    port: 3001
+    ingressPath: /auth
+  chatbot-service:
+    image: aravindacr.azurecr.io/fitbuddy-chatbot-service
+    tag: latest
+    port: 3002
+    ingressPath: /chatbot
+  diet-service:
+    image: aravindacr.azurecr.io/fitbuddy-diet-service
+    tag: latest
+    port: 3003
+    ingressPath: /diet
+  progress-service:
+    image: aravindacr.azurecr.io/fitbuddy-progress-service
+    tag: latest
+    port: 3004
+    ingressPath: /progress
+  user-service:
+    image: aravindacr.azurecr.io/fitbuddy-user-service
+    tag: latest
+    port: 3005
+    ingressPath: /user
+  workout-service:
+    image: aravindacr.azurecr.io/fitbuddy-workout-service
+    tag: latest
+    port: 3006
+    ingressPath: /workout
+  yolo-exercise-service:
+    image: aravindacr.azurecr.io/fitbuddy-yolo-exercise-service
+    tag: latest
+    port: 8000
+    ingressPath: /yolo
+  frontend:
+    image: aravindacr.azurecr.io/fitbuddy-frontend
+    tag: latest
+    port: 80
+    ingressPath: /
