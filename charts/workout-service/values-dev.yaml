@@ -1,0 +1,4 @@
+﻿environment: dev
+replicaCount: 2
+ingress:
+  host: dev.fitbuddy.local

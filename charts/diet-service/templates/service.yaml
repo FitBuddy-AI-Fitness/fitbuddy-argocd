@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-diet-service
+  labels:
+    app: fitbuddy-diet-service
+spec:
+  selector:
+    app: fitbuddy-diet-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.port }}

@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-frontend
+  labels:
+    app: fitbuddy-frontend
+spec:
+  selector:
+    app: fitbuddy-frontend
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.port }}

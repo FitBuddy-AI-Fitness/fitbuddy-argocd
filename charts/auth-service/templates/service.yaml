@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-auth-service
+  labels:
+    app: fitbuddy-auth-service
+spec:
+  selector:
+    app: fitbuddy-auth-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.port }}

@@ -1,0 +1,32 @@
+﻿environment: dev
+
+image:
+  repository: aravindacr.azurecr.io/fitbuddy-user-service
+  tag: latest
+
+service:
+  port: 3005
+
+ingress:
+  enabled: true
+  className: azure-application-gateway
+  host: dev.fitbuddy.local
+  path: /user
+
+workloadIdentity:
+  enabled: true
+  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
+
+replicaCount: 2
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+
+securityContext:
+  runAsNonRoot: true
+  runAsUser: 1000

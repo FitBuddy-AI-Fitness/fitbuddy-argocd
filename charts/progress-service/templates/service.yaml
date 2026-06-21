@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-progress-service
+  labels:
+    app: fitbuddy-progress-service
+spec:
+  selector:
+    app: fitbuddy-progress-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.port }}

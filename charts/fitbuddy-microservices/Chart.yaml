@@ -1,6 +1,0 @@
-apiVersion: v2
-name: fitbuddy-microservices
-description: A Helm chart for deploying FitBuddy AI Fitness Platform microservices
-type: application
-version: 0.1.0
-appVersion: "1.0.0"

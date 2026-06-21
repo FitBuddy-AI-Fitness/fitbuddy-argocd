@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-workout-service
+  labels:
+    app: fitbuddy-workout-service
+spec:
+  selector:
+    app: fitbuddy-workout-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.port }}

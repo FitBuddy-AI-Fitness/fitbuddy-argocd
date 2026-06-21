@@ -1,0 +1,13 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: fitbuddy-chatbot-service
+  labels:
+    app: fitbuddy-chatbot-service
+spec:
+  selector:
+    app: fitbuddy-chatbot-service
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.service.port }}
