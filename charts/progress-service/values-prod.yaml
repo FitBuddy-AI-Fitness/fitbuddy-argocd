@@ -7,10 +7,6 @@ image:
 service:
   port: 3004
 
-workloadIdentity:
-  enabled: true
-  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
-
 replicaCount: 3
 
 autoscaling:
@@ -26,4 +22,5 @@ resources:
   limits:
     cpu: "500m"
     memory: "512Mi"
+
 

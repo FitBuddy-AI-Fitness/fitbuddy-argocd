@@ -1,0 +1,3 @@
+﻿workloadIdentity:
+  enabled: true
+  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"

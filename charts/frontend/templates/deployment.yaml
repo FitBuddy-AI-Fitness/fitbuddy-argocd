@@ -17,7 +17,7 @@ spec:
         azure.workload.identity/use: "true"
         {{- end }}
     spec:
-      serviceAccountName: fitbuddy-sa-frontend
+      serviceAccountName: fitbuddy-sa
       containers:
         - name: frontend
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -41,4 +41,5 @@ spec:
               port: {{ .Values.service.port }}
             initialDelaySeconds: 10
             periodSeconds: 5
+
 
