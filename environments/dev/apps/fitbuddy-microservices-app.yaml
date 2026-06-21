@@ -1,28 +1,25 @@
-{{- range .Values.applications }}
----
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .name }}
+  name: fitbuddy-dev
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: {{ .repoURL }}
-    targetRevision: {{ .targetRevision }}
+    repoURL: https://github.com/FitBuddy-AI-Fitness/fitbuddy-argocd.git
+    targetRevision: main
     path: charts/fitbuddy-microservices
     helm:
       valueFiles:
-        - {{ .valueFile }}
+        - values-dev.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: {{ .namespace }}
+    namespace: dev
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-{{- end }}
