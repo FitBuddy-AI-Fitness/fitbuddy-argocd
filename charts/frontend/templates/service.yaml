@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-frontend
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-frontend
   ports:

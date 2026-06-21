@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-chatbot-service
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-chatbot-service
   ports:

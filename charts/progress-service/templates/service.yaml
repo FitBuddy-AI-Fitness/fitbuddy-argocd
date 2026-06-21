@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-progress-service
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-progress-service
   ports:

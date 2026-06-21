@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-diet-service
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-diet-service
   ports:

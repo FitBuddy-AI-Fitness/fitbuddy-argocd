@@ -9,7 +9,7 @@ service:
 
 ingress:
   enabled: true
-  className: azure-application-gateway
+  className: kgateway
   host: dev.fitbuddy.local
   path: /diet
 
@@ -30,3 +30,9 @@ resources:
 securityContext:
   runAsNonRoot: true
   runAsUser: 1000
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 75

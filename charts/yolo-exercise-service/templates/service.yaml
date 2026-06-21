@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-yolo-exercise-service
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-yolo-exercise-service
   ports:

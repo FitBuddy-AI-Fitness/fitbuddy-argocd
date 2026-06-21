@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-auth-service
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-auth-service
   ports:

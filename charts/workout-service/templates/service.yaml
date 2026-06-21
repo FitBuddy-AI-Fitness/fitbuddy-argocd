@@ -5,6 +5,7 @@ metadata:
   labels:
     app: fitbuddy-workout-service
 spec:
+  type: ClusterIP
   selector:
     app: fitbuddy-workout-service
   ports:
