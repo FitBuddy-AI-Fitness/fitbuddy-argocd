@@ -1,20 +1,15 @@
-﻿environment: production
-
+environment: production
 image:
   repository: aravindacr.azurecr.io/fitbuddy-user-service
-  tag: latest
-
+  tag: v1.0.0
 service:
   port: 3005
-
 replicaCount: 3
-
 autoscaling:
   enabled: true
   minReplicas: 3
   maxReplicas: 10
   targetCPUUtilizationPercentage: 75
-
 resources:
   requests:
     cpu: "250m"
@@ -22,5 +17,3 @@ resources:
   limits:
     cpu: "500m"
     memory: "512Mi"
-
-
