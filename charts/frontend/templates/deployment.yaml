@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: fitbuddy-frontend
-        {{- if .Values.workloadIdentity.enabled }}
+        {{- if and .Values.workloadIdentity .Values.workloadIdentity.enabled }}
         azure.workload.identity/use: "true"
         {{- end }}
     spec:

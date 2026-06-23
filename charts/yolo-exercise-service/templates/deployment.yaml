@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: fitbuddy-yolo-exercise-service
-        {{- if .Values.workloadIdentity.enabled }}
+        {{- if and .Values.workloadIdentity .Values.workloadIdentity.enabled }}
         azure.workload.identity/use: "true"
         {{- end }}
     spec:
