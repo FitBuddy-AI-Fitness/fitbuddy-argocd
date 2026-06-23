@@ -17,3 +17,7 @@ resources:
   limits:
     cpu: "500m"
     memory: "512Mi"
+
+workloadIdentity:
+  enabled: true
+  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
