@@ -4,11 +4,11 @@ image:
   tag: e8a4ef25fdac99e67432653348f24674e0b0a63b
 service:
   port: 3001
-replicaCount: 2
+replicaCount: 1
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 75
 resources:
   requests:

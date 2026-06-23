@@ -4,11 +4,11 @@ image:
   tag: v1.0.0
 service:
   port: 3004
-replicaCount: 3
+replicaCount: 1
 autoscaling:
   enabled: true
-  minReplicas: 3
-  maxReplicas: 10
+  minReplicas: 1
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 75
 resources:
   requests:

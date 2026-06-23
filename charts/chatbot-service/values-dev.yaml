@@ -4,11 +4,11 @@ image:
   tag: 7b3ded7
 service:
   port: 3002
-replicaCount: 2
+replicaCount: 1
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 75
 resources:
   requests:

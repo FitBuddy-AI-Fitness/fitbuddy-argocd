@@ -4,11 +4,11 @@ image:
   tag: 1b089f077f2f5b795e35104e15a62334003bd9bb
 service:
   port: 3003
-replicaCount: 2
+replicaCount: 1
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 75
 resources:
   requests:
