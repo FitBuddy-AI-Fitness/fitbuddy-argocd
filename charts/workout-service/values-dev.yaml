@@ -1,20 +1,15 @@
-﻿environment: dev
-
+environment: dev
 image:
   repository: aravindacr.azurecr.io/fitbuddy-workout-service
-  tag: latest
-
+  tag: 0a5a00ef287ea0e7eb9ddca43cd151f3abd90aa9
 service:
   port: 3006
-
 replicaCount: 2
-
 autoscaling:
   enabled: true
   minReplicas: 2
   maxReplicas: 5
   targetCPUUtilizationPercentage: 75
-
 resources:
   requests:
     cpu: "100m"
@@ -22,5 +17,3 @@ resources:
   limits:
     cpu: "500m"
     memory: "512Mi"
-
-
