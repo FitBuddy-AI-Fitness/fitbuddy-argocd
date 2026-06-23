@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: aravindacr.azurecr.io/fitbuddy-diet-service
-  tag: 0a5a00ef287ea0e7eb9ddca43cd151f3abd90aa9
+  tag: 1b089f077f2f5b795e35104e15a62334003bd9bb
 service:
   port: 3003
 replicaCount: 2
