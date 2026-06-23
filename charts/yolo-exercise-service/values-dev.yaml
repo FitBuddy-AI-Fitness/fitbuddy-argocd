@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: aravindacr.azurecr.io/fitbuddy-yolo-exercise-service
-  tag: 90946d91a382b069e57aed4bf7520027fbb559eb
+  tag: 7b3ded7
 service:
   port: 8000
 replicaCount: 2
