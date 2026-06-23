@@ -1,7 +1,7 @@
 environment: production
 image:
   repository: aravindacr.azurecr.io/fitbuddy-yolo-exercise-service
-  tag: v1.0.0
+  tag: v0.2.0-alpha
 service:
   port: 8000
 replicaCount: 1
@@ -17,7 +17,6 @@ resources:
   limits:
     cpu: "500m"
     memory: "512Mi"
-
 workloadIdentity:
   enabled: true
   clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
