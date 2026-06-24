@@ -1,6 +1,6 @@
 environment: production
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-workout-service
+  repository: acrfitbuddyprod.azurecr.io/workout-service
   tag: v0.2.0-alpha
 service:
   port: 3006
