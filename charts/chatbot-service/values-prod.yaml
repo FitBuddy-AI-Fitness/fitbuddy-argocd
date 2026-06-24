@@ -3,7 +3,7 @@ image:
   repository: acrfitbuddyprod.azurecr.io/chatbot-service
   tag: v5.9-beta.3
 service:
-  port: 3002
+  port: 5005
 replicaCount: 1
 autoscaling:
   enabled: true

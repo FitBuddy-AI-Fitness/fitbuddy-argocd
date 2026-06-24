@@ -3,7 +3,7 @@ image:
   repository: acrfitbuddyprod.azurecr.io/yolo-exercise-service
   tag: v5.9-beta.3
 service:
-  port: 8000
+  port: 8001
 replicaCount: 1
 autoscaling:
   enabled: true

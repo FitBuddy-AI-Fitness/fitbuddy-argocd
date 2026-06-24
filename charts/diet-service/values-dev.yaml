@@ -3,7 +3,7 @@ image:
   repository: aravindacr.azurecr.io/fitbuddy-diet-service
   tag: 1b089f077f2f5b795e35104e15a62334003bd9bb
 service:
-  port: 3003
+  port: 5003
 replicaCount: 1
 autoscaling:
   enabled: true

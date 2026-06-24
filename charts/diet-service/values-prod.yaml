@@ -3,7 +3,7 @@ image:
   repository: acrfitbuddyprod.azurecr.io/diet-service
   tag: v5.9-beta.3
 service:
-  port: 3003
+  port: 5003
 replicaCount: 1
 autoscaling:
   enabled: true

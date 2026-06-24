@@ -3,7 +3,7 @@ image:
   repository: acrfitbuddyprod.azurecr.io/progress-service
   tag: v5.9-beta.3
 service:
-  port: 3004
+  port: 5006
 replicaCount: 1
 autoscaling:
   enabled: true

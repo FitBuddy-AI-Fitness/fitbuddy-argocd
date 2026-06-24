@@ -3,7 +3,7 @@ image:
   repository: aravindacr.azurecr.io/fitbuddy-workout-service
   tag: 7b3ded7
 service:
-  port: 3006
+  port: 5004
 replicaCount: 1
 autoscaling:
   enabled: true

@@ -3,7 +3,7 @@ image:
   repository: aravindacr.azurecr.io/fitbuddy-yolo-exercise-service
   tag: 7b3ded7
 service:
-  port: 8000
+  port: 8001
 replicaCount: 1
 autoscaling:
   enabled: true
