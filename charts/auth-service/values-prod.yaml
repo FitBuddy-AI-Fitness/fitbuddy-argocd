@@ -1,6 +1,6 @@
 environment: production
 image:
-  repository: acrfitbuddyprod.azurecr.io/chatbot-service
+  repository: acrfitbuddyprod.azurecr.io/auth-service
   tag: v0.2.0-alpha
 service:
   port: 3001
