@@ -1,7 +1,7 @@
 environment: production
 image:
   repository: acrfitbuddyprod.azurecr.io/user-service
-  tag: v5.9-beta.3
+  tag: v5.9-beta.4
 service:
   port: 5002
 replicaCount: 1
