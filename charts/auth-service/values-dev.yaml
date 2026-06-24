@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/auth-service
-  tag: e8a4ef25fdac99e67432653348f24674e0b0a63b
+  tag: ca91215
 service:
   port: 5001
 replicaCount: 1
@@ -17,7 +17,6 @@ resources:
   limits:
     cpu: "100m"
     memory: "128Mi"
-
 workloadIdentity:
   enabled: true
   clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
