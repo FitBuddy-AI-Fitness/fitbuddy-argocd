@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: aravindacr.azurecr.io/fitbuddy-frontend
-  tag: 7b4d6a3
+  tag: ed8cc62
 service:
   port: 80
 replicaCount: 1
@@ -17,7 +17,6 @@ resources:
   limits:
     cpu: "250m"
     memory: "256Mi"
-
 workloadIdentity:
   enabled: true
   clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
