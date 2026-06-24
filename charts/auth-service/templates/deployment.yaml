@@ -29,6 +29,8 @@ spec:
           envFrom:
             - configMapRef:
                 name: fitbuddy-config-auth-service
+            - secretRef:
+                name: bodygpt-secrets
           livenessProbe:
             httpGet:
               path: /healthz
