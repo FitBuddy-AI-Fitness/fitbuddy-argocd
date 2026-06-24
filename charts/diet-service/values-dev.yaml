@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/diet-service
-  tag: 1b089f077f2f5b795e35104e15a62334003bd9bb
+  tag: 111c9d8
 service:
   port: 5003
 replicaCount: 1
@@ -17,7 +17,6 @@ resources:
   limits:
     cpu: "100m"
     memory: "128Mi"
-
 workloadIdentity:
   enabled: true
   clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
