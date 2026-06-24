@@ -31,6 +31,12 @@ spec:
                 name: fitbuddy-config-auth-service
             - secretRef:
                 name: bodygpt-secrets
+          startupProbe:
+            httpGet:
+              path: /healthz
+              port: {{ .Values.service.port }}
+            failureThreshold: 30
+            periodSeconds: 10
           livenessProbe:
             httpGet:
               path: /healthz
