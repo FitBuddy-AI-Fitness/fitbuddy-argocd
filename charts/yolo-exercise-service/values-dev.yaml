@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/yolo-exercise-service
-  tag: 7b3ded7
+  tag: 2d64590
 service:
   port: 8001
 replicaCount: 1
@@ -14,11 +14,9 @@ resources:
   requests:
     cpu: "100m"
     memory: "256Mi"
-
   limits:
     cpu: "500m"
     memory: "512Mi"
-
 workloadIdentity:
   enabled: true
   clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
