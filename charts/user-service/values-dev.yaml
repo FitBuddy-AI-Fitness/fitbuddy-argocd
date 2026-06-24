@@ -1,26 +1,23 @@
-﻿environment: dev
-
+environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-user-service
-  tag: latest
-
+  repository: acrfitbuddyprod.azurecr.io/user-service
+  tag: 0a5a00ef287ea0e7eb9ddca43cd151f3abd90aa9
 service:
-  port: 3005
-
-replicaCount: 2
-
+  port: 5002
+replicaCount: 1
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 75
-
 resources:
   requests:
     cpu: "100m"
     memory: "128Mi"
   limits:
-    cpu: "500m"
-    memory: "512Mi"
+    cpu: "250m"
+    memory: "256Mi"
 
-
+workloadIdentity:
+  enabled: true
+  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"

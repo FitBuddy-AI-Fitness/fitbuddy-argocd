@@ -1,26 +1,23 @@
-﻿environment: dev
-
+environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-diet-service
-  tag: latest
-
+  repository: acrfitbuddyprod.azurecr.io/diet-service
+  tag: 1b089f077f2f5b795e35104e15a62334003bd9bb
 service:
-  port: 3003
-
-replicaCount: 2
-
+  port: 5003
+replicaCount: 1
 autoscaling:
   enabled: true
-  minReplicas: 2
-  maxReplicas: 5
+  minReplicas: 1
+  maxReplicas: 3
   targetCPUUtilizationPercentage: 75
-
 resources:
   requests:
     cpu: "100m"
     memory: "128Mi"
   limits:
-    cpu: "500m"
-    memory: "512Mi"
+    cpu: "250m"
+    memory: "256Mi"
 
-
+workloadIdentity:
+  enabled: true
+  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
