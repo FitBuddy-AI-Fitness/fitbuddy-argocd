@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/frontend
-  tag: ed8cc62
+  tag: bebdebf
 service:
   port: 80
 replicaCount: 1
