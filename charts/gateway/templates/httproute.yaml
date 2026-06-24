@@ -7,8 +7,8 @@ spec:
   parentRefs:
     - name: fitbuddy-gateway
 
-  hostnames:
-    - {{ .Values.host | quote }}
+  #hostnames:
+    #- {{ .Values.host | quote }}
 
   rules:
     - matches:
