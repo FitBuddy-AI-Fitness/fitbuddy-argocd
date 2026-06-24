@@ -33,19 +33,19 @@ spec:
                 name: bodygpt-secrets
           startupProbe:
             httpGet:
-              path: /healthz
+              path: /health
               port: {{ .Values.service.port }}
             failureThreshold: 30
             periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /healthz
+              path: /health
               port: {{ .Values.service.port }}
             initialDelaySeconds: 15
             periodSeconds: 10
           readinessProbe:
             httpGet:
-              path: /ready
+              path: /health
               port: {{ .Values.service.port }}
             initialDelaySeconds: 10
             periodSeconds: 5
