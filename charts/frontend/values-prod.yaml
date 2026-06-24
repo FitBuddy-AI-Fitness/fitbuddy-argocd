@@ -1,7 +1,7 @@
 environment: production
 image:
   repository: acrfitbuddyprod.azurecr.io/frontend
-  tag: v0.2.0-alpha
+  tag: v5.9-beta.3
 service:
   port: 80
 replicaCount: 1
