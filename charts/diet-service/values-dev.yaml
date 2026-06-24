@@ -1,6 +1,6 @@
 environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-diet-service
+  repository: acrfitbuddyprod.azurecr.io/diet-service
   tag: 1b089f077f2f5b795e35104e15a62334003bd9bb
 service:
   port: 5003

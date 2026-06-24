@@ -1,6 +1,6 @@
 environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-chatbot-service
+  repository: acrfitbuddyprod.azurecr.io/chatbot-service
   tag: 7b3ded7
 service:
   port: 5005

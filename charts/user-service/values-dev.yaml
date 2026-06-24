@@ -1,6 +1,6 @@
 environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-user-service
+  repository: acrfitbuddyprod.azurecr.io/user-service
   tag: 0a5a00ef287ea0e7eb9ddca43cd151f3abd90aa9
 service:
   port: 5002

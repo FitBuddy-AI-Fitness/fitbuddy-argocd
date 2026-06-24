@@ -1,6 +1,6 @@
 environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-workout-service
+  repository: acrfitbuddyprod.azurecr.io/workout-service
   tag: 7b3ded7
 service:
   port: 5004

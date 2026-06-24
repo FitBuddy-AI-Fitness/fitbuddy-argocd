@@ -1,6 +1,6 @@
 environment: dev
 image:
-  repository: aravindacr.azurecr.io/fitbuddy-frontend
+  repository: acrfitbuddyprod.azurecr.io/frontend
   tag: ed8cc62
 service:
   port: 80
