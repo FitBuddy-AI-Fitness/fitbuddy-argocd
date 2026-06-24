@@ -13,7 +13,7 @@ spec:
     metadata:
       labels:
         app: fitbuddy-yolo-exercise-service
-        {{- if .Values.workloadIdentity.enabled }}
+        {{- if and .Values.workloadIdentity .Values.workloadIdentity.enabled }}
         azure.workload.identity/use: "true"
         {{- end }}
     spec:
@@ -29,15 +29,23 @@ spec:
           envFrom:
             - configMapRef:
                 name: fitbuddy-config-yolo-exercise-service
+            - secretRef:
+                name: bodygpt-secrets
+          startupProbe:
+            httpGet:
+              path: /health
+              port: {{ .Values.service.port }}
+            failureThreshold: 30
+            periodSeconds: 10
           livenessProbe:
             httpGet:
-              path: /healthz
+              path: /health
               port: {{ .Values.service.port }}
             initialDelaySeconds: 15
             periodSeconds: 10
           readinessProbe:
             httpGet:
-              path: /ready
+              path: /health
               port: {{ .Values.service.port }}
             initialDelaySeconds: 10
             periodSeconds: 5
