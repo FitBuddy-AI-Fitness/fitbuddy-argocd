@@ -31,6 +31,10 @@ spec:
                 name: fitbuddy-config-yolo-exercise-service
             - secretRef:
                 name: bodygpt-secrets
+          volumeMounts:
+            - name: secrets-store-inline
+              mountPath: "/mnt/secrets-store"
+              readOnly: true
           startupProbe:
             httpGet:
               path: /health
@@ -49,5 +53,10 @@ spec:
               port: {{ .Values.service.port }}
             initialDelaySeconds: 10
             periodSeconds: 5
-
-
+      volumes:
+        - name: secrets-store-inline
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: "fitbuddy-akv-spc-{{ .Chart.Name }}"

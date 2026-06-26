@@ -20,3 +20,6 @@ resources:
 workloadIdentity:
   enabled: true
   clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
+  tenantId: "YOUR-AZURE-TENANT-ID-HERE"
+
+keyVaultName: "YOUR-KEY-VAULT-NAME-HERE"
