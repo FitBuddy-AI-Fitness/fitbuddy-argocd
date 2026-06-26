@@ -20,7 +20,7 @@ resources:
     memory: "512Mi"
 workloadIdentity:
   enabled: true
-  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
-  tenantId: "YOUR-AZURE-TENANT-ID-HERE"
+  clientId: "9690ce92-05ca-4001-8d50-5c24ad8b749c"
+  tenantId: "bcbf2065-8fdc-47ff-9ee6-a739631314aa"
 
-keyVaultName: "YOUR-KEY-VAULT-NAME-HERE"
+keyVaultName: "kv-fitbuddy-8iuym63"
