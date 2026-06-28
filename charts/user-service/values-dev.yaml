@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/user-service
-  tag: 1b0fa92
+  tag: 5fa7dd8
 service:
   port: 5002
 replicaCount: 1
@@ -21,5 +21,4 @@ workloadIdentity:
   enabled: true
   clientId: "9690ce92-05ca-4001-8d50-5c24ad8b749c"
   tenantId: "bcbf2065-8fdc-47ff-9ee6-a739631314aa"
-
 keyVaultName: "kv-fitbuddy-8iuym63"
