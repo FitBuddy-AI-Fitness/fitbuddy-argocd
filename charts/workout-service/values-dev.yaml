@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/workout-service
-  tag: "7437237"
+  tag: "233e6d4"
 service:
   port: 5004
 replicaCount: 1
