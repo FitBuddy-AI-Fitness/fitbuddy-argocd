@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/chatbot-service
-  tag: "b0eafa8"
+  tag: "233e6d4"
 service:
   port: 5005
 replicaCount: 1
