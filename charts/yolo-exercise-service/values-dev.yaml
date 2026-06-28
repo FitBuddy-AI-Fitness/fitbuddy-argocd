@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/yolo-exercise-service
-  tag: 9fd989d
+  tag: 579b679
 service:
   port: 8001
 replicaCount: 1
