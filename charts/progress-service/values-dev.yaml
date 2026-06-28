@@ -19,6 +19,6 @@ resources:
     memory: "128Mi"
 workloadIdentity:
   enabled: true
-  clientId: "9690ce92-05ca-4001-8d50-5c24ad8b749c"
+  clientId: "7c1a4ce0-4562-4ae6-94ec-1b1c0b72981d"
   tenantId: "bcbf2065-8fdc-47ff-9ee6-a739631314aa"
 keyVaultName: "kv-fitbuddy-8iuym63"
