@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/user-service
-  tag: 5fa7dd8
+  tag: 233e6d4
 service:
   port: 5002
 replicaCount: 1
