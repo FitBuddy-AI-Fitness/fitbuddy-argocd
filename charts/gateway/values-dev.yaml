@@ -2,4 +2,4 @@
 
 workloadIdentity:
   enabled: true
-  clientId: "YOUR-AZURE-MANAGED-IDENTITY-CLIENT-ID"
+  clientId: "7c1a4ce0-4562-4ae6-94ec-1b1c0b72981d"
