@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/chatbot-service
-  tag: "7937e42"
+  tag: "b0eafa8"
 service:
   port: 5005
 replicaCount: 1
@@ -21,5 +21,4 @@ workloadIdentity:
   enabled: true
   clientId: "9690ce92-05ca-4001-8d50-5c24ad8b749c"
   tenantId: "bcbf2065-8fdc-47ff-9ee6-a739631314aa"
-
 keyVaultName: "kv-fitbuddy-8iuym63"
