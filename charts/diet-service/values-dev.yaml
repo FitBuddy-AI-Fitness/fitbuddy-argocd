@@ -1,7 +1,7 @@
 environment: dev
 image:
   repository: acrfitbuddyprod.azurecr.io/diet-service
-  tag: 13b33fd
+  tag: 579b679
 service:
   port: 5003
 replicaCount: 1
